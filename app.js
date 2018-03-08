@@ -25,14 +25,6 @@ var appEnv = cfenv.getAppEnv();
 app.listen(appEnv.port, '0.0.0.0', function() {
   // print a message when the server starts listening
   console.log("server starting on " + appEnv.url);
-//add sta
-// リクエストの処理
-function doRequest(req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write('Hello World\n');
-    res.end();
-}
-//add sto
 
 
 });
