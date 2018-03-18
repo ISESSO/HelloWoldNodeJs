@@ -16,8 +16,14 @@ var cfenv = require('cfenv');
 var app = express();
 
 // serve the files out of ./public as our main files
-app.use(express.static(__dirname + '/public'));
-
+///chg sta
+//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'),function(req, res){
+    res.writeHead(200, {'Content-Type':'text/html'});
+    res.write('<h1>Hello Node !</h1>');
+    res.end();
+});
+//chg sto
 // get the app environment from Cloud Foundry
 var appEnv = cfenv.getAppEnv();
 //add sta
